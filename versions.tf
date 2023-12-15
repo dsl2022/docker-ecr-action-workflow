@@ -15,7 +15,7 @@ terraform {
     encrypt              = true # If the state should be encrypted
     dynamodb_table       = var.dynamodb_table # DynamoDB table for state locking and consistency checking
     assume_role_with_web_identity = {
-    role_arn           = var.role_arn
+    role_arn           = "arn:aws:iam::212612999379:role/github-actions-dsl"
     }
   }
 }
