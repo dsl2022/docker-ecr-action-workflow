@@ -14,13 +14,5 @@ terraform {
     region               = var.region # The AWS region where the bucket is located
     encrypt              = true # If the state should be encrypted
     dynamodb_table       = var.dynamodb_table # DynamoDB table for state locking and consistency checking
-    assume_role_with_web_identity = {
-    role_arn           = "arn:aws:iam::212612999379:role/github-actions-dsl"
-    }
   }
-}
-
-provider "aws" {
-  profile = "github-action"
-  region = "us-east-1"
 }
