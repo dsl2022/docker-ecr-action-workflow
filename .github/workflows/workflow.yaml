@@ -24,7 +24,7 @@ on:
         type: string
       backend_iam_role:
         description: Name of the Terraform backend assumable IAM Role
-        default: "workload-assumable-role"
+        default: "github-actions-dsl"
         type: string
       github_iam_role:
         description: Name of the IAM Role for adding access to ECR repo
@@ -35,7 +35,7 @@ on:
         type: string
       aws_region:
         description: Target AWS Region
-        default: "us-west-2"
+        default: "us-east-1"
         type: string
       backend_dynamodb_table:
         description: DynamoDB table for State lock
