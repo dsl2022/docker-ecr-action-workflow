@@ -14,6 +14,8 @@ terraform {
     region               = var.region # The AWS region where the bucket is located
     encrypt              = true # If the state should be encrypted
     dynamodb_table       = var.dynamodb_table # DynamoDB table for state locking and consistency checking
-    role_arn             = var.role_arn # IAM role ARN for Terraform to assume, if necessary
+    assume_role {
+      role_arn     = var.role_arn
+    }
   }
 }
