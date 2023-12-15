@@ -20,7 +20,7 @@ on:
         type: string
       backend_s3_bucket:
         description: Name of the S3bucket for Terraform backend
-        default: "terraform-backend-primary-region"
+        default: "2024-terraform-backend"
         type: string
       backend_iam_role:
         description: Name of the Terraform backend assumable IAM Role
