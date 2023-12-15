@@ -19,3 +19,12 @@ terraform {
     }
   }
 }
+
+provider "aws" {
+  profile = "github-action"
+  region = "us-east-1"
+  assume_role {
+    role_arn = "arn:aws:iam::212612999379:role/github-actions-dsl"
+    session_name = "terraform"
+  }
+}
